@@ -1,0 +1,22 @@
+#Se conoce de un trabajador su nombre, el número de horas normales trabajadas, el pago de una hora normal y el número de horas extras trabajadas. Además, que, cada hora extra se paga 25% más del valor de una hora normal. Si se deducen al trabajador sobre el sueldo base 5% del pago forzoso, 2% de política habitacional y 7% para caja de ahorro. Si se le asignan 250.000 COP por actualización académica, 173.000 COP por cada hijo y una prima por hogar de 180000 COP. Calcule y muestre las asignaciones, las deducciones y el sueldo neto del trabajador para el mes de diciembre.
+nombre=(input("introduzca el nombre del trabajador:  "))
+htrabajadas=int(input("introduzca el número de horas trabajadas:  "))
+hextras=int(input("introduzca el número de horas extras trabajadas:  "))
+valorhora=int(input("introduzca el valor de hora trabajada:  "))
+cantidadhijos=int(input("introduzca el número de hijos que tiene:  "))
+horasextras=(valorhora*0.25)
+horastrabajo=(htrabajadas*valorhora)*30
+sueldobase=(horastrabajo+horasextras)
+elpagoforzoso=(sueldobase*0.05)
+politicahabitacional=(sueldobase*0.02)
+cajadeahorro=(sueldobase*0.07)
+actacademica=(250000)
+cadahijo=(173000*cantidadhijos)
+primahogar=(180000)
+salarioneto1=(elpagoforzoso+politicahabitacional+cajadeahorro)
+salarioneto2=(actacademica+cadahijo+primahogar+horasextras)
+salarioneto3=(sueldobase+salarioneto2)-salarioneto1
+print(f"el sueldo base constaria de la suma de:  {sueldobase}")
+print(f"el valor de la deducciones es:  {salarioneto1}")
+print(f"el valor de la asignaciones es:  {salarioneto2}")
+print(f"el sueldo par el mes de dieciembre seria:  {salarioneto3}")
